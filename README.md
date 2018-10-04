@@ -43,7 +43,7 @@ source set_env.sh
 ### Create your release
   ```bash
   cd nginx_release
-  bosh create-release --force --tarball releases/release.gz
+  bosh create-release --force --tarball releases/release.gz --timestamp-version
   ```
   You should now have a BOSH Release in the releases of this project
 
@@ -79,7 +79,8 @@ fly -t concourse-tutorial set-pipeline -c ci/pipeline.yml -p ${GITHUB_USERNAME}-
 ---
 ---
 ## Lab 2: Building Our first Tasks
-* Open `ci/tasks/upload-release.sh`
+* Open `ci/tasks/upload-release.sh`fly -t concourse-tutorial set-pipeline -c ci/pipeline.yml -p ${GITHUB_USERNAME}-pipeline
+
 * Add the following environment variables, provided by the course proctor
 
 ```bash
